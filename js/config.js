@@ -85,13 +85,13 @@ export const SPC_TORN_URL = 'https://www.spc.noaa.gov/products/outlook/day1otlk_
 export const SPC_HAIL_URL = 'https://www.spc.noaa.gov/products/outlook/day1otlk_hail.lyr.geojson';
 export const SPC_WIND_URL = 'https://www.spc.noaa.gov/products/outlook/day1otlk_wind.lyr.geojson';
 // ── Example Day Endpoints (March 15, 2025) ──────────────────
-export const EXAMPLE_CAT_URL     = '/ExampleDay/cat_day1_1630.lyr.geojson';
-export const EXAMPLE_TORN_URL    = '/ExampleDay/torn_day1_1630.lyr.geojson';
-export const EXAMPLE_HAIL_URL    = '/ExampleDay/hail_day1_1630.lyr.geojson';
-export const EXAMPLE_WIND_URL    = '/ExampleDay/wind_day1_1630.lyr.geojson';
-export const EXAMPLE_CIGTORN_URL = '/ExampleDay/cigtorn_day1_1630.lyr.geojson';
-export const EXAMPLE_CIGHAIL_URL = '/ExampleDay/cighail_day1_1630.lyr.geojson';
-export const EXAMPLE_CIGWIND_URL = '/ExampleDay/cigwind_day1_1630.lyr.geojson';
+export const EXAMPLE_CAT_URL     = '/public/ExampleDay/cat_day1_1630.lyr.geojson';
+export const EXAMPLE_TORN_URL    = '/public/ExampleDay/torn_day1_1630.lyr.geojson';
+export const EXAMPLE_HAIL_URL    = '/public/ExampleDay/hail_day1_1630.lyr.geojson';
+export const EXAMPLE_WIND_URL    = '/public/ExampleDay/wind_day1_1630.lyr.geojson';
+export const EXAMPLE_CIGTORN_URL = '/public/ExampleDay/cigtorn_day1_1630.lyr.geojson';
+export const EXAMPLE_CIGHAIL_URL = '/public/ExampleDay/cighail_day1_1630.lyr.geojson';
+export const EXAMPLE_CIGWIND_URL = '/public/ExampleDay/cigwind_day1_1630.lyr.geojson';
 
 // 25 miles expressed in meters — matches the SPC "within 25 miles" probability definition
 export const RADIUS_METERS = 40233.6;
