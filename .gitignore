@@ -2,6 +2,3 @@ node_modules/
 # Claude / AI settings
 CLAUDE.md
 .claude/
-
-# Build outputs
-dist/
