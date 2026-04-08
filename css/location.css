@@ -1,0 +1,207 @@
+/* ============================================================
+   location.css — Location banner, search form, user map marker
+   ============================================================ */
+
+/* ---------- Location Banner ---------- */
+#location-banner {
+  background: var(--bg-third);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.75rem 2rem;
+  animation: bannerSlideIn 0.4s var(--ease-out);
+}
+
+@keyframes bannerSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#location-banner-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ── Location Result ── */
+#location-result {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.location-pin-icon {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+#location-text {
+  color: var(--accent);
+}
+
+/* Risk-level color variants applied to the banner via JS */
+#location-banner.risk-none {
+  border-left: 4px solid var(--accent);
+}
+
+#location-banner.risk-none #location-text {
+  color: var(--accent);
+}
+
+#location-banner.risk-tstm {
+  border-left: 4px solid var(--spc-tstm);
+  background: linear-gradient(90deg, rgba(193, 233, 193, 0.08) 0%, var(--bg-surface) 40%);
+}
+
+#location-banner.risk-tstm {
+  border-left: 4px solid var(--spc-tstm);
+  background: linear-gradient(90deg, rgba(193, 233, 193, 0.08) 0%, var(--bg-surface) 40%);
+}
+
+#location-banner.risk-mrgl {
+  border-left: 4px solid var(--spc-mrgl);
+  background: linear-gradient(90deg, rgba(102, 163, 102, 0.1) 0%, var(--bg-surface) 40%);
+}
+
+#location-banner.risk-slgt {
+  border-left: 4px solid var(--spc-slgt);
+  background: linear-gradient(90deg, rgba(255, 224, 102, 0.1) 0%, var(--bg-surface) 40%);
+}
+
+#location-banner.risk-enh {
+  border-left: 4px solid var(--spc-enh);
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.1) 0%, var(--bg-surface) 40%);
+}
+
+#location-banner.risk-mdt {
+  border-left: 4px solid var(--spc-mdt);
+  background: linear-gradient(90deg, rgba(230, 0, 0, 0.1) 0%, var(--bg-surface) 40%);
+}
+
+#location-banner.risk-high {
+  border-left: 4px solid var(--spc-high);
+  background: linear-gradient(90deg, rgba(255, 0, 255, 0.1) 0%, var(--bg-surface) 40%);
+}
+
+/* ── Location Search Form ── */
+#location-search {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#search-form {
+  display: flex;
+  gap: 0.4rem;
+  min-width: 220px;
+  max-width: 340px;
+}
+
+#search-input {
+  flex: 1;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.85rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#search-input::placeholder {
+  color: var(--text-muted);
+}
+
+#search-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+#search-btn {
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--bg-primary);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: transform 0.15s var(--ease-out), box-shadow 0.15s;
+  white-space: nowrap;
+}
+
+#search-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px var(--accent-glow);
+}
+
+#search-btn:active {
+  transform: translateY(0);
+}
+
+#search-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+#search-error {
+  font-size: 0.78rem;
+  color: #ef4444;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+/* ── User Location Marker ── */
+.user-marker {
+  position: relative;
+}
+
+.user-marker-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border: 2.5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+.user-marker-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.25);
+  animation: markerPulse 2s ease-out infinite;
+}
+
+@keyframes markerPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,59 @@
+/* ============================================================
+   base.css — Reset, base element styles, utility classes, footer
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+/* ---------- Utility ---------- */
+.hidden {
+  display: none !important;
+}
+
+/* ---------- Footer ---------- */
+#app-footer {
+  background: var(--bg-header);
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
+  color: var(--text-primary);
+}
+
+#app-footer a {
+  font-weight: 500;
+  color: var(--text-secondary);
+}

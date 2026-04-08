@@ -1,0 +1,266 @@
+/* ============================================================
+   example.css — Example Day section styles
+   ============================================================ */
+
+/* ---------- Call-to-Action Banner ---------- */
+#example-cta {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 2rem 2rem;
+}
+
+.example-cta-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.example-cta-text h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.example-cta-text p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 540px;
+}
+
+#example-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+#example-cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px var(--accent-glow);
+  color: #fff;
+  text-decoration: none;
+}
+
+#example-cta-btn:active {
+  transform: translateY(0);
+}
+
+/* ---------- Example Day Section ---------- */
+#example-day-section {
+  padding: 0;
+}
+
+.example-header {
+  text-align: center;
+  padding: 2rem 2rem 1rem;
+  background: var(--bg-high-risk);
+}
+
+.example-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.example-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ---------- Example Content Area (map + sidebar) ---------- */
+#example-content-area {
+  display: flex;
+  position: relative;
+  min-height: 500px;
+}
+
+#example-map-wrapper {
+  position: relative;
+  flex: 1;
+  min-height: 500px;
+  width: 100%;
+}
+
+#example-map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--bg-primary);
+}
+
+/* ---------- Example Legend ---------- */
+#example-legend {
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  z-index: 500;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--shadow-lg);
+  min-width: 190px;
+  transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+}
+
+#example-legend:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+/* ---------- Example Loading Overlay ---------- */
+#example-map-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 600;
+  background: rgba(11, 15, 25, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: opacity 0.4s var(--ease-out);
+}
+
+#example-map-loading.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#example-map-loading p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ---------- Example Edu Panel (sidebar) ---------- */
+#example-edu-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  width: var(--sidebar-width);
+  max-width: 90vw;
+  height: 100%;
+  overflow-y: auto;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-subtle);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+#example-edu-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0.3rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, color 0.2s;
+}
+
+#example-edu-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+#example-edu-risk-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+#example-edu-risk-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#example-edu-risk-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#example-edu-panel .edu-section {
+  margin-bottom: 1.25rem;
+}
+
+#example-edu-panel .edu-section h3 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+#example-edu-panel .edu-section p {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.55;
+}
+
+/* Probability container — mirrors #edu-probabilities layout from sidebar.css */
+#example-edu-probabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .example-cta-inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .example-cta-text p {
+    max-width: none;
+  }
+
+  #example-map-wrapper {
+    min-height: 400px;
+  }
+
+  #example-legend {
+    bottom: 12px;
+    right: 12px;
+    min-width: 160px;
+    max-width: 200px;
+  }
+
+  #example-edu-panel {
+    width: min(var(--sidebar-width), 90vw);
+  }
+}

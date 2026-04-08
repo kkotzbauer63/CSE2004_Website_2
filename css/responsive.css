@@ -1,0 +1,58 @@
+/* ============================================================
+   responsive.css — Breakpoint overrides
+   ============================================================ */
+
+@media (max-width: 900px) {
+  /* Sidebar overlays at all sizes — just cap its width on small screens */
+  #edu-panel {
+    width: min(var(--sidebar-width), 90vw);
+    max-height: 100%;
+    box-shadow: 4px 0 32px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 640px) {
+  #app-header {
+    padding: 1rem 1rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #app-header h1 {
+    font-size: 1.2rem;
+  }
+
+  #legend {
+    bottom: 12px;
+    right: 12px;
+    left: auto; /* Ensure it's not stretching to both sides */
+    width: fit-content;
+    min-width: 160px;
+    max-width: 200px; /* Keep it nice and compact */
+  }
+
+  #map-wrapper {
+    min-height: 400px;
+  }
+
+  #location-banner {
+    padding: 0.6rem 1rem;
+  }
+
+  #location-search {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #search-form {
+    width: 100%;
+    max-width: none;
+  }
+
+  #edu-panel {
+    padding: 1.25rem 1rem 1.5rem;
+  }
+}

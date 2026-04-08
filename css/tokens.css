@@ -1,0 +1,65 @@
+/* ============================================================
+   tokens.css — Design tokens (CSS custom properties)
+   ============================================================ */
+
+:root {
+  /* --- Color Scheme Toggle (Experimental) --- */
+  /* Default: Dark Mode Storm Theme */
+  /*
+  --bg-primary:    #0b0f19;
+  --bg-secondary:  #111827;
+  --bg-surface:    #1a2234;
+  --bg-glass:      rgba(17, 24, 39, 0.75);
+  --text-primary:   #f0f4f8;
+  --text-secondary: #94a3b8;
+  --text-muted:     #64748b;
+  --accent:        #38bdf8;
+  --accent-glow:   rgba(56, 189, 248, 0.25);
+  --border-subtle: rgba(148, 163, 184, 0.12);
+  --border-accent: rgba(56, 189, 248, 0.3);
+  --map-bg:        #0b0f19;
+  */
+
+  /* Test Scheme: Lighter Blue & Soft Yellow (Light Mode) */
+  --bg-primary:    #f8fafc;
+  --bg-secondary:  #f1f5f9;
+  --bg-third: #fbf9e9;
+  --bg-high-risk: #fe98f4;
+  --bg-header: #ff9900;
+  --bg-surface:    #ffffff;
+  --bg-glass:      rgba(255, 255, 255, 0.8);
+  --text-primary:  #0f172a;
+  --text-secondary: #475569;
+  --text-muted:    #94a3b8;
+  --accent:        #0ea5e9; /* Lighter Blue */
+  --accent-glow:   rgba(14, 165, 233, 0.15);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-accent: rgba(14, 165, 233, 0.3);
+  --map-bg:        #f1f5f9;
+
+  /* SPC Risk Colors (Test: Lighter/Softer) */
+  --spc-tstm: #c0f1d1; /* Very light green */
+  --spc-mrgl: #61c283; /* Light green */
+  --spc-slgt: #ffff20; /* Non-bold, soft yellow */
+  --spc-enh:  #fbb15d; /* Soft orange */
+  --spc-mdt:  #bb0303; /* Soft red */
+  --spc-high: #ff6ce9; /* Soft purple */
+
+  /* Radius / spacing */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows (Adjusted for light mode) */
+  --shadow-sm:   0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md:   0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg:   0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 15px var(--accent-glow);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Sidebar width */
+  --sidebar-width: 380px;
+}
