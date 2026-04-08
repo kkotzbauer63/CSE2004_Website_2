@@ -273,6 +273,14 @@
   padding: 2px 8px !important;
 }
 
+.leaflet-attribution-flag { 
+  display: none !important; 
+}
+
+.leaflet-control-attribution::before {
+    content: "© ";
+}
+
 .leaflet-control-attribution a {
   color: var(--text-secondary) !important;
 }
